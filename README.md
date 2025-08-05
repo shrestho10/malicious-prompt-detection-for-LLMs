@@ -23,7 +23,9 @@ Large language models (LLMs) are vulnerable to "jailbreak" prompts that induce u
 ---
 
 
-WorkFlow:
+## 📊 Workflow
+
+```
 +-------------------+
 | 1. Data Collection|
 +-------------------+
@@ -84,7 +86,7 @@ WorkFlow:
 | - Print and compare scores |
 | - Select best model        |
 +----------------------------+
-
+```
 
 
 ## 🗂️ Project Structure
