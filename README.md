@@ -22,6 +22,71 @@ Large language models (LLMs) are vulnerable to "jailbreak" prompts that induce u
 
 ---
 
+
+WorkFlow:
++-------------------+
+| 1. Data Collection|
++-------------------+
+         |
+         v
++------------------------------+
+| Load raw CSV into DataFrame |
+|  (FinalRaWData.csv)         |
++------------------------------+
+         |
+         v
++-------------------------------+
+| 2. Data Cleaning & Preprocess |
++-------------------------------+
+| - Drop Unnamed, NaN, Duplicates|
+| - Clean text (tokenize,       |
+|   lowercase, stem, lemmatize, |
+|   remove stopwords)           |
+| - Save cleaned CSV            |
++-------------------------------+
+         |
+         v
++--------------------------------------+
+| 3. Text Vectorization (3 alternatives)|
++--------------------------------------+
+| a) CountVectorizer (Bag-of-Words)    |
+| b) TF-IDF Vectorizer                 |
+| c) Word2Vec Embeddings               |
++--------------------------------------+
+         |
+         v
++------------------------------+
+| 4. Train/Test Split (80/20) |
++------------------------------+
+         |
+         v
++--------------------------------------------------+
+| 5. Model Training & Evaluation                   |
++--------------------------------------------------+
+| Multiple Classifiers:                            |
+| - Logistic Regression                            |
+| - SVM (Support Vector Machine)                   |
+| - Random Forest                                  |
+| - k-NN (k-Nearest Neighbors)                     |
+| - Naive Bayes                                    |
+| - Decision Tree                                  |
+| - Gradient Boosting                              |
+| - Extra Trees                                    |
++--------------------------------------------------+
+| Metrics Computed:                                |
+| - Accuracy, Precision, Recall, F1 Score          |
++--------------------------------------------------+
+         |
+         v
++----------------------------+
+| 6. Performance Comparison  |
++----------------------------+
+| - Print and compare scores |
+| - Select best model        |
++----------------------------+
+
+
+
 ## 🗂️ Project Structure
 
 ├── data/
